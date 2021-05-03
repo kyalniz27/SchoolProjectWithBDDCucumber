@@ -19,9 +19,9 @@ public class StudentPageElements {
     @FindBy(xpath = "//li[contains(text(),'Start Course')]") public WebElement startCourse;
     @FindBy(tagName = "input") public WebElement viewButton;
     @FindBy(css = ".panel-heading.ng-binding") public List<WebElement> lessons;
-    @FindBy(xpath = "(//span[contains(text(),'%')])[26]") public WebElement lesson26;
-    @FindBy(xpath = "(//span[contains(text(),'%')])[27]") public WebElement lesson27;
-    @FindBy(xpath = "(//span[contains(text(),'%')])[28]") public WebElement lesson28;
+    @FindBy(xpath = "(//span[contains(text(),'%')])[29]") public WebElement lesson29;
+    @FindBy(xpath = "(//span[contains(text(),'%')])[30]") public WebElement lesson30;
+    @FindBy(xpath = "(//span[contains(text(),'%')])[31]") public WebElement lesson31;
 
 
     public StudentPageElements(WebDriver driver){

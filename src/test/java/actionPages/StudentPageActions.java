@@ -55,9 +55,9 @@ public class StudentPageActions {
     }
 
     public void getStudentAverage() {
-        int lesson26 = 0;
-        int lesson27 = 0;
-        int lesson28 = 0;
+        int lesson29 = 0;
+        int lesson30 = 0;
+        int lesson31 = 0;
 
 
         List<WebElement> lessons = studentPageElements.lessons;
@@ -66,38 +66,38 @@ public class StudentPageActions {
 
 
         for (WebElement x : lessons) {
-            if (x.getText().contains("26. Ders")) {
-                String s1 = studentPageElements.lesson26.getText();
+            if (x.getText().contains("29. Ders")) {
+                String s1 = studentPageElements.lesson29.getText();
                 String s2 = s1.replace("%", "");
-                lesson26 = Integer.parseInt(s2);
+                lesson29 = Integer.parseInt(s2);
                 break;
             }
         }
 
         for (WebElement x : lessons) {
-            if (x.getText().contains("27. Ders")) {
-                String s1 = studentPageElements.lesson27.getText();
+            if (x.getText().contains("30. Ders")) {
+                String s1 = studentPageElements.lesson30.getText();
                 String s2 = s1.replace("%", "");
-                lesson27 = Integer.parseInt(s2);
+                lesson30 = Integer.parseInt(s2);
                 break;
             }
         }
 
 
         for (WebElement x : lessons) {
-            if (x.getText().contains("28. Ders")) {
-                String s1 = studentPageElements.lesson28.getText();
+            if (x.getText().contains("31. Ders")) {
+                String s1 = studentPageElements.lesson31.getText();
                 String s2 = s1.replace("%", "");
-                lesson28 = Integer.parseInt(s2);
+                lesson31 = Integer.parseInt(s2);
                 break;
             }
         }
 
-        double average = (double)(lesson26 + lesson27 + lesson28)  / 3;
+        double average = (double)(lesson29 + lesson30 + lesson31)  / 3;
 
-        System.out.println("Percentage of lesson 26 is: " + lesson26);
-        System.out.println("Percentage of lesson 27 is: " + lesson27);
-        System.out.println("Percentage of lesson 28 is: " + lesson28);
+        System.out.println("Percentage of lesson 29 is: " + lesson29);
+        System.out.println("Percentage of lesson 30 is: " + lesson30);
+        System.out.println("Percentage of lesson 31 is: " + lesson31);
         //System.out.println(studentsName + "'s average is: " + average);
         System.out.printf(studentsName + "'s average is %.2f", average);
 
