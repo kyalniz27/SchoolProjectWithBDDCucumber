@@ -32,19 +32,19 @@ public class LoginPageActions {
 
     public void clickOnLoginBtn() {
         loginPageElements.loginBtn.click();
-
     }
 
     public void teacherPageName(){
         String actUser = loginPageElements.teacherName.getText().trim();
-        String expUser = "Mustafa Köklü";
+        String expUser = "MUSTAFA KÖKLÜ";
         Assert.assertEquals(expUser,actUser);
     }
 
-    public void getAlertText(){
-       String alertMessage = loginPageElements.warningMessage.getText();
-        System.out.println(alertMessage);
-        loginPageElements.btnClose.click();
-
+    public String getErrorText() throws InterruptedException{
+    	Thread.sleep(1000);
+    	String errorMessage = loginPageElements.warningMessage.getText().trim();
+    	loginPageElements.btnClose.click();
+    	Thread.sleep(1000);
+    	return errorMessage;
     }
 }

@@ -1,5 +1,6 @@
 actionPages\LoginPageActions.class
 elements\LoginPageElements.class
+elements\ContactPageElements.class
 stepDefinition\ContactPageSD.class
 stepDefinition\CommonSteps.class
 actionPages\StudentPageActions.class
@@ -7,4 +8,5 @@ actionPages\CommonActions.class
 stepDefinition\StudentPageSD.class
 testRunner\RunnerClass.class
 elements\StudentPageElements.class
+actionPages\ContactPageActions.class
 stepDefinition\LoginPageSD.class

@@ -61,9 +61,9 @@ public class LoginPageSD {
        loginPageActions.clickOnLoginBtn();
     }
 
-    @Then("user sees alert message")
-    public void user_sees_alert_message() {
-     loginPageActions.getAlertText();
+    @Then("user sees {string} error message")
+    public void user_sees_alert_message(String message) throws InterruptedException {
+    	Assert.assertEquals(message, loginPageActions.getErrorText());
     }
 
 

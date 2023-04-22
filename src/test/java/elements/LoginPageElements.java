@@ -13,9 +13,9 @@ public class LoginPageElements {
     @FindBy(xpath = "//*[@name='Email']") public WebElement username;
     @FindBy(xpath = "//*[@name='Password']") public WebElement password;
     @FindBy(xpath = "//input[@id='btn-login']") public WebElement loginBtn;
-    @FindBy(xpath = "//a[text()='Mustafa Köklü ']") public WebElement teacherName;
-    @FindBy(xpath = "//div[contains(text(),'Invalid email address or password')]") public WebElement warningMessage;
-    @FindBy(id = "btnClose") public WebElement btnClose;
+    @FindBy(xpath = "//a[@id='about']") public WebElement teacherName;
+    @FindBy(xpath = "//div[@class='modal-content']//div[@class='modal-body']") public WebElement warningMessage;
+    @FindBy(xpath = "//button[@id='btnClose']") public WebElement btnClose;
 
 
     public LoginPageElements(WebDriver driver) {

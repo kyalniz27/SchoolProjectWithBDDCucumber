@@ -3,9 +3,11 @@ package stepDefinition;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import io.cucumber.java.Scenario;
 import java.util.concurrent.TimeUnit;
 
 public class CommonSteps {
@@ -23,9 +25,13 @@ public class CommonSteps {
     }
 
     @After
-    public void tearDown() throws Exception{
+    public void tearDown(Scenario scenario) throws Exception{
+    	if(scenario.isFailed()) {
+    		final byte[] scr = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+    		scenario.attach(scr, "image/png", scenario.getName());
+    	}
         driver.quit();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
 
     public WebDriver getDriver(){

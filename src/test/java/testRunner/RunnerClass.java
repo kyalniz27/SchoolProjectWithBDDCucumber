@@ -8,13 +8,13 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/resources/Features"},
         glue = {"stepDefinition"},
-        plugin = {"pretty", "html:target/out-put/report.html"},
+        //plugin = {"pretty", "html:json-report/cucumber.html"},
+        //plugin = {"pretty", "json:target/json-report/cucumber.json"},
+        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         dryRun = false,
         monochrome = true,
-        tags = "@Student"
-
-
-)
+        tags = "@valid or @invalid"
+        )
 
 public class RunnerClass {
 }

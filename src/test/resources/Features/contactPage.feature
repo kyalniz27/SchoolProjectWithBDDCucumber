@@ -1,11 +1,13 @@
 Feature: contact page test
 
-  Background:
+  Background: 
     Given guest is on login page
 
-  @Contact
+  @contact
   Scenario: checking contact page
     When guest clicks on contact us button
-    Then guest enters fullname,email and message
-      | fullname       | email              | message      |
-      | Mustafa  Koklu | m.koklu@sany.org   | Hello World! |
+    And guest enters 'fullname','email' and 'message'
+    And guest cliks on send button to send the message 
+    
+     #| fullname      | email            | message      |
+      #| Mustafa Koklu | m.koklu@sany.org | Hello World! | 
