@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         dryRun = false,
         monochrome = true,
-        tags = "@valid or @invalid"
+        tags = "@active"
         )
 
 public class RunnerClass {

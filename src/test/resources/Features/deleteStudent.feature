@@ -4,7 +4,7 @@ Feature: Test delete functionality for inactive student
     Given user is on login page
 
   @delete
-  Scenario: Verify login page with valid credentials
+  Scenario: Verify delete text of inactive user
     When user clicks on sign in button
     And user enters 'm.koklu@sany.org' and "2121" and click on login button
     Then user is navigated to teacher page

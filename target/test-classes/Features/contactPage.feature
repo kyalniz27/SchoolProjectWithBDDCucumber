@@ -9,5 +9,5 @@ Feature: contact page test
     And guest enters 'fullname','email' and 'message'
     And guest cliks on send button to send the message 
     
-     #| fullname      | email            | message      |
-      #| Mustafa Koklu | m.koklu@sany.org | Hello World! | 
+     | fullname      | email            | message      |
+     | Mustafa Koklu | m.koklu@sany.org | Hello World! | 

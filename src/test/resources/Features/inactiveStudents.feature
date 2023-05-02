@@ -4,7 +4,7 @@ Feature: Verify inactive students
     Given user is on login page
 
   @inactive
-  Scenario: Verify login page with valid credentials
+  Scenario: Verify inactive students in the system
     When user clicks on sign in button
     And user enters 'm.koklu@sany.org' and "2121" and click on login button
     Then user is navigated to teacher page

@@ -16,7 +16,10 @@ public class LoginPageElements {
     @FindBy(xpath = "//a[@id='about']") public WebElement teacherName;
     @FindBy(xpath = "//div[@class='modal-content']//div[@class='modal-body']") public WebElement warningMessage;
     @FindBy(xpath = "//button[@id='btnClose']") public WebElement btnClose;
-
+    @FindBy(xpath = "//a[@id='about']") public WebElement userDropdown;
+    @FindBy(xpath = "//a[@id='btn-logout']") public WebElement logOutBtn;
+    @FindBy(xpath = "//button[@class='btn to-btn active']") public WebElement signUpBtn;
+  
 
     public LoginPageElements(WebDriver driver) {
         this.driver = driver;

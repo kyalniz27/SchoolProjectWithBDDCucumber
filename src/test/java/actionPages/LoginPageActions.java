@@ -47,4 +47,13 @@ public class LoginPageActions {
     	Thread.sleep(1000);
     	return errorMessage;
     }
+    
+    public void LogOutFromTheSystem() {
+    	loginPageElements.userDropdown.click();
+    	loginPageElements.logOutBtn.click();
+    }
+    
+    public boolean VerifyUserLoggedOut() {
+    	return loginPageElements.signUpBtn.isDisplayed();
+    }
 }
